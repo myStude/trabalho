@@ -171,10 +171,8 @@ public class Estoque {
 	}
         
         public static void main(String[] args) {
-            formEstoque frm = new formEstoque();
-            
-            frm.setVisible(true);           
-            
+            formEstoque frm = new formEstoque();            
+            frm.setVisible(true);
         }
 
 }
