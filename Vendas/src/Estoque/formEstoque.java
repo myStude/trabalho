@@ -65,6 +65,7 @@ public class formEstoque extends javax.swing.JFrame {
         jTextArea1.setColumns(1);
         jTextArea1.setRows(5);
         jTextArea1.setRequestFocusEnabled(false);
+        jTextArea1.setVerifyInputWhenFocusTarget(false);
         jScrollPane4.setViewportView(jTextArea1);
 
         jMenu1.setText("Arquivo");
@@ -144,8 +145,15 @@ public class formEstoque extends javax.swing.JFrame {
     }                                          
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        jTextArea1.append(jTextPane1.getText() + "\n");
+        jTextArea1.setText("");
+        Estoque Imp = new Estoque();
+
+//        Imp.incluirProdutoAlimento(WIDTH, null, null, HIDE_ON_CLOSE, null, null);
         
+        int i = 0;        
+        for(i=0;i<10;i++){
+            jTextArea1.append(jTextPane1.getText() + i + "\n");    
+        }        
     }                                        
 
     /**
