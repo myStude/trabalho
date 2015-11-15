@@ -169,5 +169,12 @@ public class Estoque {
 		}
 		System.out.println("");
 	}
+        
+        public static void main(String[] args) {
+            formEstoque frm = new formEstoque();
+            
+            frm.setVisible(true);           
+            
+        }
 
 }
