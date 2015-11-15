@@ -62,7 +62,7 @@ public class formEstoque extends javax.swing.JFrame {
 
         jLabel2.setText("Valor");
 
-        jTextArea1.setColumns(20);
+        jTextArea1.setColumns(1);
         jTextArea1.setRows(5);
         jTextArea1.setRequestFocusEnabled(false);
         jScrollPane4.setViewportView(jTextArea1);
@@ -105,8 +105,8 @@ public class formEstoque extends javax.swing.JFrame {
                             .addComponent(jLabel1)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 320, Short.MAX_VALUE)
-                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 338, Short.MAX_VALUE)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
