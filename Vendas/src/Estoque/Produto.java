@@ -1,45 +1,47 @@
+package Estoque;
+
 import java.io.Serializable;
 
 /**
-* A instância dessa classe armazena um produto
+* A instï¿½ncia dessa classe armazena um produto
 *
 */
 
 public class Produto implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
-	int Codigo;  				//código do produto
+	int Codigo;  				//cï¿½digo do produto
 	String Nome_do_produto; 	//nome do produto
-	String Descricao;  			//descrição do produto
+	String Descricao;  			//descriï¿½ï¿½o do produto
 	double Valor_do_produto; 	//valor do produto
 	
 	/**
-	 * Método getCodigo - obtem o código do produto
+	 * Mï¿½todo getCodigo - obtem o cï¿½digo do produto
 	 *
-	 *@return int - código do produto
+	 *@return int - cï¿½digo do produto
 	 * */
     public int getCodigo() {
 		return Codigo;
 	}
 
 	/**
-	 * Método setCodigo - atribui um novo código ao produto
+	 * Mï¿½todo setCodigo - atribui um novo cï¿½digo ao produto
 	 * 
-	 * @param tipo int - código do produto
+	 * @param tipo int - cï¿½digo do produto
 	 * */
 	public void setCodigo(int codigo) {
 		Codigo = codigo;
 	}
 
 	/**
-	 * Método getNome_do_produto - obtem o nome do produto
+	 * Mï¿½todo getNome_do_produto - obtem o nome do produto
 	 * @return String - nome do produto
 	 * */
 	public String getNome_do_produto() {
 		return Nome_do_produto;
 	}
 	/**
-	 * Método setNome_do_produto - atribui um novo nome ao produto
+	 * Mï¿½todo setNome_do_produto - atribui um novo nome ao produto
 	 * 
 	 * @param tipo String - nome do produto
 	 * */
@@ -48,42 +50,42 @@ public class Produto implements Serializable{
 	}
 
 	/**
-	 * Método getDescricao - obtem a descriÃ§Ã£o do produto
+	 * Mï¿½todo getDescricao - obtem a descriÃ§Ã£o do produto
 	 *
-	 *@return String - descrição do produto
+	 *@return String - descriï¿½ï¿½o do produto
 	 * */
 	public String getDescricao() {
 		return Descricao;
 	}
 	/**
-	 * Método setDescricao - atribui uma nova descrição
+	 * Mï¿½todo setDescricao - atribui uma nova descriï¿½ï¿½o
 	 * 
-	 * @param tipo String - descrição
+	 * @param tipo String - descriï¿½ï¿½o
 	 * */
 	public void setDescricao(String descricao) {
 		Descricao = descricao;
 	}
 
 	/**
-	 * Método getValor_do_produto - obtem o preço do produto
+	 * Mï¿½todo getValor_do_produto - obtem o preï¿½o do produto
 	 *
-	 *@return double - preço do produto
+	 *@return double - preï¿½o do produto
 	 * */
 	public double getValor_do_produto() {
 		return Valor_do_produto;
 	}
 	
 	/**
-	 * Método setValor_do_produto - atribui um novo preço
+	 * Mï¿½todo setValor_do_produto - atribui um novo preï¿½o
 	 * 
-	 * @param tipo double - preço do produto
+	 * @param tipo double - preï¿½o do produto
 	 * */
 	public void setValor_do_produto(double valor_do_produto) {
 		Valor_do_produto = valor_do_produto;
 	}
 
 	/**
-	 * Método construtor - atribui um novo preço
+	 * Mï¿½todo construtor - atribui um novo preï¿½o
 	 * 
 	 * @param Codigo - tipo int - codigo do produto
 	 * @param Nome_do_produto - tipo String - nome do produto

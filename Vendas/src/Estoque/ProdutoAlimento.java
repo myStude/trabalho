@@ -1,3 +1,5 @@
+package Estoque;
+
 
 public class ProdutoAlimento extends Produto {
 

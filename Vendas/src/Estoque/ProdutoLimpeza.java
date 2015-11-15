@@ -1,3 +1,5 @@
+package Estoque;
+
 public class ProdutoLimpeza extends Produto {
 
 	private static final long serialVersionUID = 1483652216205491933L;
