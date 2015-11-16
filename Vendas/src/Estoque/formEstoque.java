@@ -14,13 +14,13 @@ package Estoque;
 public class formEstoque extends javax.swing.JFrame {
 
     public Estoque Imp = new Estoque();
-
+    Integer Cod = 0;
     
     /**
      * Creates new form formEstoque
      */
     public formEstoque() {
-        initComponents();
+        initComponents();        
     }
 
     /**
@@ -62,7 +62,11 @@ public class formEstoque extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jTextPane1.setMaximumSize(null);
+        jTextPane1.setName(""); // NOI18N
+        jTextPane1.setPreferredSize(null);
         jScrollPane1.setViewportView(jTextPane1);
+        jTextPane1.getAccessibleContext().setAccessibleDescription("");
 
         jLabel1.setText("Nome do Produto");
 
@@ -73,10 +77,15 @@ public class formEstoque extends javax.swing.JFrame {
             }
         });
 
+        jTextPane2.setMaximumSize(null);
+        jTextPane2.setName(""); // NOI18N
+        jTextPane2.setPreferredSize(null);
         jScrollPane2.setViewportView(jTextPane2);
+        jTextPane2.getAccessibleContext().setAccessibleDescription("");
 
         jLabel2.setText("Valor");
 
+        jTextArea1.setEditable(false);
         jTextArea1.setColumns(1);
         jTextArea1.setRows(5);
         jTextArea1.setRequestFocusEnabled(false);
@@ -85,7 +94,14 @@ public class formEstoque extends javax.swing.JFrame {
 
         jLabel3.setText("Cód Produto");
 
+        jTextPane3.setEditable(false);
+        jTextPane3.setText("0");
+        jTextPane3.setMaximumSize(null);
+        jTextPane3.setName(""); // NOI18N
+        jTextPane3.setNextFocusableComponent(jTextPane1);
         jScrollPane3.setViewportView(jTextPane3);
+        jTextPane3.getAccessibleContext().setAccessibleName("");
+        jTextPane3.getAccessibleContext().setAccessibleDescription("");
 
         jButton2.setText("Mostar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -94,16 +110,27 @@ public class formEstoque extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setText("Cód Produto");
+        jLabel4.setText("Descricao");
 
+        jTextPane4.setMaximumSize(null);
+        jTextPane4.setName(""); // NOI18N
+        jTextPane4.setPreferredSize(null);
         jScrollPane5.setViewportView(jTextPane4);
+        jTextPane4.getAccessibleContext().setAccessibleDescription("");
 
-        jLabel5.setText("Nome do Produto");
+        jLabel5.setText("Tipo de Dieta");
 
+        jTextPane5.setMaximumSize(null);
+        jTextPane5.setName(""); // NOI18N
+        jTextPane5.setPreferredSize(null);
         jScrollPane6.setViewportView(jTextPane5);
+        jTextPane5.getAccessibleContext().setAccessibleDescription("");
 
-        jLabel6.setText("Valor");
+        jLabel6.setText("Ingredientes");
 
+        jScrollPane7.setMaximumSize(null);
+        jScrollPane7.setName(""); // NOI18N
+        jScrollPane7.setPreferredSize(null);
         jScrollPane7.setViewportView(jTextPane6);
 
         jMenu1.setText("Arquivo");
@@ -134,58 +161,66 @@ public class formEstoque extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4)
-                            .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5)
-                            .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6)))
-                    .addComponent(jSeparator1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1)
-                    .addComponent(jScrollPane4))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel2)
+                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel3)
+                                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel4))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel5)
+                                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel6)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel1)))
+                        .addComponent(jSeparator1)
+                        .addComponent(jButton2)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(11, 11, 11)
+                        .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(13, 13, 13)
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(13, 13, 13)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(13, 13, 13)
-                        .addComponent(jLabel6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -196,6 +231,8 @@ public class formEstoque extends javax.swing.JFrame {
                 .addComponent(jButton2)
                 .addGap(21, 21, 21))
         );
+
+        jScrollPane7.getAccessibleContext().setAccessibleDescription("");
 
         pack();
     }// </editor-fold>                        
@@ -214,18 +251,27 @@ public class formEstoque extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         jTextArea1.setText("");
         Double Vlr = Double.parseDouble(jTextPane2.getText());
-        Integer Cod = Integer.parseInt(jTextPane3.getText());
-        Imp.incluirProdutoAlimento(Cod,jTextPane1.getText(),"alimeto",Vlr,"calorias","natural");
+        Imp.incluirProdutoAlimento(Cod,jTextPane1.getText(),jTextPane4.getText(),Vlr,jTextPane5.getText(),jTextPane6.getText());
+        jTextPane3.setText(String.valueOf(Integer.parseInt(jTextPane3.getText()) + 1));
         
+        limparCampos();
     }                                        
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         jTextArea1.setText("");
         for(Produto Rows:Imp.getListaDeProdutos()){
-            jTextArea1.append(Rows.getNome_do_produto() + "\n");
+            jTextArea1.append(Rows.getNome_do_produto() + " - " + Rows.getValor_do_produto()  +  "\n");
         }       
     }                                        
 
+    private void limparCampos(){
+        jTextPane1.setText(null);
+        jTextPane2.setText(null);
+        jTextPane4.setText(null);
+        jTextPane5.setText(null);
+        jTextPane6.setText(null);
+    }
+    
     /**
      * @param args the command line arguments
      */
