@@ -260,7 +260,7 @@ public class formEstoque extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         jTextArea1.setText("");
         for(Produto Rows:Imp.getListaDeProdutos()){
-            jTextArea1.append(Rows.getNome_do_produto() + " - " + Rows.getValor_do_produto()  +  "\n");
+            jTextArea1.append(Rows.getNome_do_produto() + " - " + Rows.getValor_do_produto() +  "\n");
         }       
     }                                        
 
