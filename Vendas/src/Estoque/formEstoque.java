@@ -350,7 +350,7 @@ public class formEstoque extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         jTextArea1.setText(null);
-    
+        checaPreenchido();
         if(jRadioButton1.isSelected()){
             Est.incluirProdutoAlimento(
                     Integer.parseInt(jTextPane1.getText()), 
@@ -380,7 +380,10 @@ public class formEstoque extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void checaPreenchido(){
-        jTextPane1.getText();
+        String tx = jTextPane1.getText();
+        if(tx.length() <= 1){
+            jTextArea1.append("opa...");
+        }
         
     }
     
@@ -400,7 +403,6 @@ public class formEstoque extends javax.swing.JFrame {
         jTextPane1.setText(null);
         jTextPane2.setText(null);
         jTextPane3.setText(null);
-        jTextPane4.setText(null);
         jTextPane5.setText(null);
         jTextPane6.setText(null);
     }
@@ -426,9 +428,7 @@ public class formEstoque extends javax.swing.JFrame {
      * @param evt 
      */
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-         for(Produto Rows:Est.getListaDeProdutos()){
-            jTextArea1.append(Rows.getNome_do_produto() + " - " + Rows.getValor_do_produto()  +  "\n");
-             } 
+            Mostra();     
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
