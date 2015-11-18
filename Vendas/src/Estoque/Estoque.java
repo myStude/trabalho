@@ -85,7 +85,7 @@ public class Estoque {
 	 */
 	public int getProdutoIndice(int codigo) {
 		int posicaoAtual = 0;
-		int posicaoProd = -1;
+		int posicaoProd = -1;                
 		for(Produto prod: listaDeProdutos) {
 			if (prod.getCodigo() == codigo) {
 				posicaoProd = posicaoAtual;
@@ -94,6 +94,23 @@ public class Estoque {
 			posicaoAtual++;
 		}
 		return posicaoProd;
+	}
+
+	/**
+	 * Pesquisa um produto pelo codigo e retorna seu Nome
+	 * @param codigo
+	 * @return int indice
+	 */
+	public String getDetalhesProduto(int codigo) {
+		String nmProduto = "Produto nao encontrado";                
+		for(Produto prod: listaDeProdutos) {
+			if (prod.getCodigo() == codigo) {
+				nmProduto = prod.getDescricao() + ": " + prod.Nome_do_produto 
+                                            + "\n" + " R$" + prod.Valor_do_produto;
+				break;
+			}
+		}
+		return nmProduto;
 	}
 
 	/**
