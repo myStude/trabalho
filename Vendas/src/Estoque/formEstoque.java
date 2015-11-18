@@ -388,9 +388,9 @@ public class formEstoque extends javax.swing.JFrame {
      * Mostra depois de inserir
      */
     private void Mostra(){
-         for(Produto Rows:Est.getListaDeProdutos()){
-            jTextArea1.append(Rows.getNome_do_produto() + " - " + Rows.getValor_do_produto()  +  "\n");
-             }         
+        for(Produto Rows:Est.getListaDeProdutos()){
+           jTextArea1.append(Rows.getDescricao() + ": " + Rows.getNome_do_produto() + " \t R$" + Rows.getValor_do_produto()  +  "\n");
+        }         
     }
 
     /**
