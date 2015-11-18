@@ -5,7 +5,11 @@
  */
 package Estoque;
 
-import com.oracle.webservices.internal.api.message.PropertySet;
+//import com.oracle.webservices.internal.api.message.PropertySet;
+
+import java.awt.Color;
+import javax.swing.ButtonGroup;
+
 
 /**
  *
@@ -14,6 +18,7 @@ import com.oracle.webservices.internal.api.message.PropertySet;
 public class formEstoque extends javax.swing.JFrame {
 
     public Estoque Est = new Estoque();
+    int cod = 0;
 
     
     /**
@@ -21,8 +26,25 @@ public class formEstoque extends javax.swing.JFrame {
      */
     public formEstoque() {
         initComponents();
+        groupButton();
+        jTextPane1.setText(String.valueOf(cod));
     }
 
+    /**
+     * Agrupar radios!
+     */
+    private void groupButton(){
+        ButtonGroup bg1 = new ButtonGroup( );
+
+        bg1.add(jRadioButton1);
+        bg1.add(jRadioButton2);
+        
+        jRadioButton1.setSelected(true);
+        jLabel5.setText("Tipo de Dieta");
+        jLabel5.setForeground(Color.blue);
+        jLabel6.setText("Ingredientes");
+        jLabel6.setForeground(Color.blue);    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -32,6 +54,7 @@ public class formEstoque extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -52,6 +75,8 @@ public class formEstoque extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
         jPanel2 = new javax.swing.JPanel();
         jButton4 = new javax.swing.JButton();
         jScrollPane7 = new javax.swing.JScrollPane();
@@ -76,6 +101,8 @@ public class formEstoque extends javax.swing.JFrame {
             }
         });
 
+        jTextPane1.setEditable(false);
+        jTextPane1.setFocusable(false);
         jScrollPane1.setViewportView(jTextPane1);
 
         jScrollPane2.setViewportView(jTextPane2);
@@ -99,6 +126,20 @@ public class formEstoque extends javax.swing.JFrame {
         jLabel5.setText("jLabel1");
 
         jLabel6.setText("jLabel1");
+
+        jRadioButton1.setText("Adicionar Alimento");
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
+            }
+        });
+
+        jRadioButton2.setText("Adicionar Limpeza");
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -134,7 +175,7 @@ public class formEstoque extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(jLabel2)
-                                        .addGap(0, 151, Short.MAX_VALUE))
+                                        .addGap(0, 155, Short.MAX_VALUE))
                                     .addComponent(jScrollPane2))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -143,12 +184,21 @@ public class formEstoque extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel4)
                                 .addGap(360, 360, 360)))
-                        .addContainerGap())))
+                        .addContainerGap())
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jRadioButton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jRadioButton2)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(34, Short.MAX_VALUE)
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton1)
+                    .addComponent(jRadioButton2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 4, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel1)
@@ -277,7 +327,7 @@ public class formEstoque extends javax.swing.JFrame {
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -304,28 +354,12 @@ public class formEstoque extends javax.swing.JFrame {
                             jTextPane4.getText(), 
                             Double.parseDouble(jTextPane3.getText()), 
                             jTextPane5.getText(), 
-                            jTextPane6.getText());
-                    
+                            jTextPane6.getText());                   
+               cod = Integer.parseInt(jTextPane1.getText()) + 1;
                Mostra();     
                Limpa();
-    // AÇÕES: 
-	/*
-    Inclui um produto ProdutoAlimento
-        - Codigo
-        - Nome_do_produto
-        - Descricao
-        - Valor_do_produto
-        - tipoDeDieta
-        - ingredientes
- 
-    Inclui um produto ProdutoLimpeza
-        - Codigo
-        - Nome_do_produto
-        - Descricao
-        - Valor_do_produto
-        - aplicacao
-        - tipo
-	 */
+               jTextPane1.setText(String.valueOf(cod));
+    
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -376,6 +410,28 @@ public class formEstoque extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
+     * Radio cadastraAlimento
+     * @param evt 
+     */
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+        jLabel5.setText("Tipo de Dieta");
+        jLabel5.setForeground(Color.blue);
+        jLabel6.setText("Ingredientes");
+        jLabel6.setForeground(Color.blue);
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
+
+    /**
+     * Radio cadastraLimpeza
+     * @param evt 
+     */
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+        jLabel5.setText("Aplicaçao");
+        jLabel5.setForeground(Color.red);
+        jLabel6.setText("Tipo");
+        jLabel6.setForeground(Color.red);
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
+
+    /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
@@ -411,6 +467,7 @@ public class formEstoque extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -429,6 +486,8 @@ public class formEstoque extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
