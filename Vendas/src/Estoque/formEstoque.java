@@ -5,12 +5,17 @@
  */
 package Estoque;
 
+import com.oracle.webservices.internal.api.message.PropertySet;
+
 /**
  *
  * @author FagnerDin
  */
 public class formEstoque extends javax.swing.JFrame {
 
+    public Estoque Est = new Estoque();
+
+    
     /**
      * Creates new form formEstoque
      */
@@ -292,7 +297,18 @@ public class formEstoque extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // AÇÕES: 
+                    jTextArea1.setText(null);
+                    Est.incluirProdutoAlimento(
+                            Integer.parseInt(jTextPane1.getText()), 
+                            jTextPane2.getText(), 
+                            jTextPane4.getText(), 
+                            Double.parseDouble(jTextPane3.getText()), 
+                            jTextPane5.getText(), 
+                            jTextPane6.getText());
+                    
+               Mostra();     
+               Limpa();
+    // AÇÕES: 
 	/*
     Inclui um produto ProdutoAlimento
         - Codigo
@@ -312,6 +328,27 @@ public class formEstoque extends javax.swing.JFrame {
 	 */
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    /**
+     * Mostra depois de inserir
+     */
+    private void Mostra(){
+         for(Produto Rows:Est.getListaDeProdutos()){
+            jTextArea1.append(Rows.getNome_do_produto() + " - " + Rows.getValor_do_produto()  +  "\n");
+             }         
+    }
+
+    /**
+     * Limpa campos depois de inserir
+     */
+    private void Limpa(){
+        jTextPane1.setText(null);
+        jTextPane2.setText(null);
+        jTextPane3.setText(null);
+        jTextPane4.setText(null);
+        jTextPane5.setText(null);
+        jTextPane6.setText(null);
+    }
+    
     /**
      * Botao buscar: busca e ativa edição e botao salvar
      * @param evt 
@@ -333,7 +370,9 @@ public class formEstoque extends javax.swing.JFrame {
      * @param evt 
      */
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+         for(Produto Rows:Est.getListaDeProdutos()){
+            jTextArea1.append(Rows.getNome_do_produto() + " - " + Rows.getValor_do_produto()  +  "\n");
+             } 
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
