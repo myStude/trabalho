@@ -9,7 +9,6 @@ package Estoque;
 
 import java.awt.Color;
 import javax.swing.ButtonGroup;
-import sun.security.util.Length;
 
 
 /**
@@ -312,6 +311,11 @@ public class formEstoque extends javax.swing.JFrame {
         jMenu1.add(jMenuItem2);
 
         jMenuItem3.setText("Fechar");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem3);
 
         jMenuBar1.add(jMenu1);
@@ -400,7 +404,7 @@ public class formEstoque extends javax.swing.JFrame {
      * Limpa campos depois de inserir
      */
     private void Limpa(){
-        jTextPane1.setText(null);
+        jTextPane1.setText(String.valueOf(cod));
         jTextPane2.setText(null);
         jTextPane3.setText(null);
         jTextPane5.setText(null);
@@ -428,7 +432,9 @@ public class formEstoque extends javax.swing.JFrame {
      * @param evt 
      */
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-            Mostra();     
+        jTextArea1.setText(null);
+        Limpa();    
+        Mostra();     
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
@@ -454,6 +460,10 @@ public class formEstoque extends javax.swing.JFrame {
         jLabel6.setText("Tipo");
         jLabel6.setForeground(Color.red);
     }//GEN-LAST:event_jRadioButton2ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     /**
      * @param args the command line arguments
