@@ -30,6 +30,8 @@ public class formEstoque extends javax.swing.JFrame implements Serializable{
         initComponents();
         groupButton();
         jTextPane1.setText(String.valueOf(cod));
+        jPanel4.hide();
+
     }
 
     /**
@@ -99,6 +101,11 @@ public class formEstoque extends javax.swing.JFrame implements Serializable{
         jScrollPane10 = new javax.swing.JScrollPane();
         jTextPane9 = new javax.swing.JTextPane();
         jButton5 = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        jButton6 = new javax.swing.JButton();
+        jScrollPane11 = new javax.swing.JScrollPane();
+        jTextPane10 = new javax.swing.JTextPane();
+        jLabel12 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -213,7 +220,7 @@ public class formEstoque extends javax.swing.JFrame implements Serializable{
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton1)
                     .addComponent(jRadioButton2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -340,6 +347,7 @@ public class formEstoque extends javax.swing.JFrame implements Serializable{
         );
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Edicao"));
+        jPanel4.setForeground(new java.awt.Color(255, 102, 0));
 
         jLabel9.setText("Nome do Produto");
 
@@ -356,40 +364,75 @@ public class formEstoque extends javax.swing.JFrame implements Serializable{
             }
         });
 
+        jLabel11.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel11.setText("-");
+
+        jButton6.setText("Excluir");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
+        jTextPane10.setEditable(false);
+        jTextPane10.setToolTipText("DIGITE UM VALOR INTEIRO");
+        jTextPane10.setFocusable(false);
+        jScrollPane11.setViewportView(jTextPane10);
+
+        jLabel12.setText("Cód.");
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton5)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel11)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel9)
-                            .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(123, 123, 123)
+                        .addComponent(jButton5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel10)
-                            .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(jButton6)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel12))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel9)
+                    .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel10)
+                    .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jLabel11)
+                .addGap(12, 12, 12)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel10)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel9)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel12))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton5)
-                .addContainerGap(68, Short.MAX_VALUE))
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton5)
+                    .addComponent(jButton6))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         jMenu1.setText("Arquivo");
@@ -430,8 +473,8 @@ public class formEstoque extends javax.swing.JFrame implements Serializable{
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -443,7 +486,7 @@ public class formEstoque extends javax.swing.JFrame implements Serializable{
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -456,7 +499,8 @@ public class formEstoque extends javax.swing.JFrame implements Serializable{
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         jTextArea1.setText(null);
-        checaPreenchido();
+        jPanel4.setVisible(false);
+
         if(jRadioButton1.isSelected()){
             Est.incluirProdutoAlimento(
                     Integer.parseInt(jTextPane1.getText()), 
@@ -485,14 +529,6 @@ public class formEstoque extends javax.swing.JFrame implements Serializable{
     
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void checaPreenchido(){
-        String tx = jTextPane1.getText();
-        if(tx.length() <= 1){
-            jTextArea1.append("opa...");
-        }
-        
-    }
-    
     /**
      * Mostra depois de inserir
      */
@@ -519,7 +555,7 @@ public class formEstoque extends javax.swing.JFrame implements Serializable{
      */
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // botao buscar, quando clicado aciona botao salvar
-        
+        jPanel4.setVisible(false);
         Integer psq = Integer.parseInt(jTextPane7.getText());
         jLabel8.setText(String.valueOf(Est.getDetalhesProduto(psq)));            
 
@@ -534,7 +570,8 @@ public class formEstoque extends javax.swing.JFrame implements Serializable{
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         jTextArea1.setText(null);
         Limpa();    
-        Mostra();     
+        Mostra();   
+        jPanel4.setVisible(false);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
@@ -561,31 +598,66 @@ public class formEstoque extends javax.swing.JFrame implements Serializable{
         jLabel6.setForeground(Color.red);
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
+    /**
+     * Botao sair
+     * @param evt 
+     */
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
+    /**
+     * Botao Edita
+     * @param evt 
+     */
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:       
-        
-        jTextPane8.setText(String.valueOf(Est.getDetalhesProduto(
-                                        Integer.parseInt(jTextPane7.getText()))));   
-        
-       jTextPane9.setText("Edicao");
+        String r = Est.getDetalhesProduto(Integer.parseInt(jTextPane7.getText()));
+        if(r != "Produto nao encontrado"){
+            Produto p = Est.getProduto(Integer.parseInt(jTextPane7.getText()));
+            jPanel4.setVisible(true);
+            jLabel11.setText(p.Descricao);
+            jTextPane10.setText(String.valueOf(p.Codigo));
+            jTextPane8.setText(p.Nome_do_produto);
+            jTextPane9.setText(String.valueOf(p.Valor_do_produto));
+        }
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    /**
+     * botao salva edição
+     * @param evt 
+     */
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+        Produto d = Est.getProduto(Integer.parseInt(jTextPane10.getText()));
+            d.setNome_do_produto(jTextPane8.getText());
+            d.setValor_do_produto(Double.parseDouble(jTextPane9.getText()));
+        jPanel4.setVisible(false);
+        
     }//GEN-LAST:event_jButton5ActionPerformed
 
+    /**
+     * Botao Exporta
+     * @param evt 
+     */
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
         Est.salvarLista("C:\\temp\\ListaTrabalho.txt");
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
+    /**
+     * Botao Importa
+     * @param evt 
+     */
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         Est.carregarLista("C:\\temp\\ListaTrabalho.txt");
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        Est.excluirProduto(Integer.parseInt(jTextPane10.getText()));
+        jPanel4.setVisible(false);
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -629,8 +701,11 @@ public class formEstoque extends javax.swing.JFrame implements Serializable{
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -652,6 +727,7 @@ public class formEstoque extends javax.swing.JFrame implements Serializable{
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
+    private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -662,6 +738,7 @@ public class formEstoque extends javax.swing.JFrame implements Serializable{
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextPane jTextPane1;
+    private javax.swing.JTextPane jTextPane10;
     private javax.swing.JTextPane jTextPane2;
     private javax.swing.JTextPane jTextPane3;
     private javax.swing.JTextPane jTextPane4;
